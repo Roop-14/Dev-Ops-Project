@@ -8,7 +8,7 @@ pipeline {
            }
            stage('Build the code') {
                steps {
-                     mvn package
+                   sh  'mvn clean package'
                   }
            }
            stage('Archiving artifacts & Junit Test Results') {
